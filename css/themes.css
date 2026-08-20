@@ -1,0 +1,179 @@
+/* ============================================================================
+ * WaveTogether — themes.css
+ * Система скинов в духе Winamp: каждая тема — набор CSS-переменных на <html>.
+ * Акцент можно переопределить инлайн-стилем --accent (color picker).
+ * ========================================================================== */
+
+/* ---------- 1. DARK NOIR (тёмная по умолчанию) ---------- */
+:root, html[data-theme="noir"] {
+  color-scheme: dark;
+  --bg: #0b0e1a;
+  --bg-2: #0f1324;
+  --panel: #141a2e;
+  --text: #eaeaf6;
+  --muted: #8b91b4;
+  --border: rgba(148, 158, 214, .14);
+  --accent: #8b7cf6;   /* лавандовый */
+  --accent-2: #f472b6; /* розовый    */
+  --accent-ink: #ffffff;
+  --ok: #34d399;
+  --danger: #fb7185;
+}
+
+/* ---------- 2. SOFT PINK (нежная, «для пар») ---------- */
+html[data-theme="pink"] {
+  color-scheme: light;
+  --bg: #fdf1f5;
+  --bg-2: #fce7ee;
+  --panel: #ffffff;
+  --text: #503046;
+  --muted: #a2738c;
+  --border: rgba(214, 120, 160, .22);
+  --accent: #ec5f93;
+  --accent-2: #a78bfa;
+  --accent-ink: #ffffff;
+  --ok: #16a34a;
+  --danger: #e11d48;
+}
+html[data-theme="pink"] .card,
+html[data-theme="pink"] .quick-action,
+html[data-theme="pink"] .partner-pill { box-shadow: 0 6px 24px -14px rgba(214, 120, 160, .35); }
+
+/* ---------- 3. NEON CYBERPUNK ---------- */
+html[data-theme="cyber"] {
+  color-scheme: dark;
+  --bg: #05070f;
+  --bg-2: #090d1a;
+  --panel: #0b1120;
+  --text: #d9f7ff;
+  --muted: #5e7fa3;
+  --border: rgba(34, 211, 238, .22);
+  --accent: #22d3ee;
+  --accent-2: #f0abfc;
+  --accent-ink: #03222b;
+  --ok: #4ade80;
+  --danger: #ff4d6d;
+}
+html[data-theme="cyber"] .card,
+html[data-theme="cyber"] .dock--widget,
+html[data-theme="cyber"] .chat,
+html[data-theme="cyber"] .modal {
+  box-shadow: 0 0 0 1px rgba(34, 211, 238, .07), 0 0 34px -12px rgba(34, 211, 238, .3);
+}
+html[data-theme="cyber"] .topnav__logo .ic { filter: drop-shadow(0 0 7px var(--accent)); }
+
+/* ---------- 4. PASTEL DREAM ---------- */
+html[data-theme="pastel"] {
+  color-scheme: light;
+  --bg: #f3f0fb;
+  --bg-2: #ece8f8;
+  --panel: #ffffff;
+  --text: #4c4664;
+  --muted: #9a93b8;
+  --border: rgba(147, 130, 197, .2);
+  --accent: #a78bfa;
+  --accent-2: #7dd3fc;
+  --accent-ink: #ffffff;
+  --ok: #22b07d;
+  --danger: #ef476f;
+}
+html[data-theme="pastel"] .card,
+html[data-theme="pastel"] .quick-action { box-shadow: 0 10px 30px -18px rgba(147, 130, 197, .45); }
+
+/* ---------- 5. CLASSIC WINAMP (ретро) ---------- */
+html[data-theme="winamp"] {
+  color-scheme: dark;
+  --bg: #191921;
+  --bg-2: #21212b;
+  --panel: #26262f;
+  --text: #d8e1cc;
+  --muted: #8a937d;
+  --border: rgba(0, 0, 0, .55);
+  --accent: #8ce800;   /* фирменный салатовый Winamp */
+  --accent-2: #ff7f27; /* оранжевый индикатор */
+  --accent-ink: #1a2600;
+  --ok: #8ce800;
+  --danger: #ff4136;
+  --radius: 8px;
+  --radius-sm: 6px;
+  --radius-xs: 4px;
+}
+/* Вдавленные «бордюры» как в классических плеерах */
+html[data-theme="winamp"] .card,
+html[data-theme="winamp"] .dock--bar,
+html[data-theme="winamp"] .dock--widget,
+html[data-theme="winamp"] .dock--float,
+html[data-theme="winamp"] .modal,
+html[data-theme="winamp"] #custom-drawer,
+html[data-theme="winamp"] .chat,
+html[data-theme="winamp"] #custom-drawer {
+  border: 1px solid #0c0c10;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .13),
+    inset 0 -1px 0 rgba(0, 0, 0, .5),
+    0 10px 30px -18px rgba(0, 0, 0, .8);
+  border-radius: var(--radius-sm);
+}
+html[data-theme="winamp"] .btn,
+html[data-theme="winamp"] .input,
+html[data-theme="winamp"] .select,
+html[data-theme="winamp"] .segmented,
+html[data-theme="winamp"] .chip {
+  border-radius: var(--radius-xs);
+}
+html[data-theme="winamp"] .btn { box-shadow: inset 0 1px 0 rgba(255,255,255,.12), inset 0 -1px 0 rgba(0,0,0,.4); }
+html[data-theme="winamp"] .btn:hover { transform: none; }
+html[data-theme="winamp"] .stage__cover { border-radius: 4px; }
+html[data-theme="winamp"] .avatar { border-radius: 6px; }
+html[data-theme="winamp"] .room-card__icon, html[data-theme="winamp"] .room__badge { border-radius: 6px; }
+/* Шрифт в стиле ретро-дисплея удобно выбрать «Моно» в разделе шрифтов */
+
+/* ---------- 6. OCEAN BLUE ---------- */
+html[data-theme="ocean"] {
+  color-scheme: dark;
+  --bg: #04101f;
+  --bg-2: #07182c;
+  --panel: #0a2036;
+  --text: #e2f2ff;
+  --muted: #7aa3c4;
+  --border: rgba(96, 165, 250, .18);
+  --accent: #38bdf8;
+  --accent-2: #34d399;
+  --accent-ink: #04263b;
+  --ok: #34d399;
+  --danger: #fb7185;
+}
+html[data-theme="ocean"] #bg-layer.bg--default {
+  background:
+    radial-gradient(70% 60% at 80% 0%, rgba(56, 189, 248, .12), transparent 60%),
+    var(--bg);
+}
+
+/* ---------- 7. SUNSET WARM ---------- */
+html[data-theme="sunset"] {
+  color-scheme: dark;
+  --bg: #160b10;
+  --bg-2: #1f0f16;
+  --panel: #241118;
+  --text: #ffe9e3;
+  --muted: #b98a92;
+  --border: rgba(251, 146, 60, .18);
+  --accent: #fb923c;
+  --accent-2: #f472b6;
+  --accent-ink: #331303;
+  --ok: #4ade80;
+  --danger: #ff5c7a;
+}
+html[data-theme="sunset"] #bg-layer.bg--default {
+  background:
+    radial-gradient(80% 55% at 50% 0%, rgba(251, 146, 60, .12), transparent 65%),
+    var(--bg);
+}
+
+/* ---------- Дефолтный фон для тёмных тем без кастомного бэкграунда ---------- */
+#bg-layer.bg--default {
+  background:
+    radial-gradient(70% 55% at 15% 0%, color-mix(in srgb, var(--accent) 9%, transparent), transparent 60%),
+    radial-gradient(50% 45% at 90% 100%, color-mix(in srgb, var(--accent-2) 8%, transparent), transparent 60%),
+    var(--bg);
+}
